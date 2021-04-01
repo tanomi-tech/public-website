@@ -101,11 +101,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #f24088;
+  color: #0398e8;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #f9a0c4;
+    color: #54c2fd;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -4013,7 +4013,7 @@ html {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 36px;
     height: 3px;
-    background-color: #f24088;
+    background-color: #0398e8;
     border-radius: 3px;
     position: absolute;
     transition-property: transform;
@@ -4049,7 +4049,7 @@ html {
     transform: translate3d(0, -20px, 0) rotate(-90deg); }
 
 a {
-  color: #f24088; }
+  color: #0398e8; }
 
 p {
   line-height: 26px;
@@ -4099,7 +4099,7 @@ ol {
     flex: 1 0 0; }
 
 .header {
-  color: #f24088;
+  color: #0398e8;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -4119,7 +4119,7 @@ ol {
   position: static; }
 
 .footer {
-  background: #f24088;
+  background: #0398e8;
   padding-top: 15px;
   padding-bottom: 15px; }
   .footer .footer-inner {
@@ -4174,7 +4174,7 @@ ol {
             height: 40px;
             padding: 10px 8px 10px 8px; } }
 .sub-footer {
-  background: #ef106a;
+  background: #0277b6;
   color: #ffffff;
   padding-top: 15px;
   padding-bottom: 15px; }
@@ -4242,7 +4242,7 @@ ol {
         display: inline-block;
         font-weight: normal;
         text-decoration: none;
-        color: #f24088; }
+        color: #0398e8; }
         .main-menu > ul > li > a:hover {
           text-decoration: underline; }
       .main-menu > ul > li.active > a {
@@ -4254,7 +4254,7 @@ ol {
 
 .main-menu-mobile {
   position: fixed;
-  background: #f24088;
+  background: #0398e8;
   top: 0;
   left: 0;
   width: 100%;
@@ -4331,7 +4331,7 @@ ol {
   .hamburger .hamburger-inner,
   .hamburger .hamburger-inner::before,
   .hamburger .hamburger-inner::after {
-    background: #f24088; }
+    background: #0398e8; }
   .hamburger .hamburger-inner::after {
     width: 18px;
     right: 0; }
@@ -4345,7 +4345,7 @@ ol {
   height: 40px;
   line-height: 40px;
   padding: 0 14px;
-  background: #f24088;
+  background: #0398e8;
   border-radius: 4px;
   font-size: 14px;
   font-weight: normal;
@@ -4357,7 +4357,7 @@ ol {
   transition: all 0.15s ease; }
   .button:hover {
     color: #ffffff;
-    background-color: #f570a6;
+    background-color: #22b0fc;
     transform: translateY(-1px);
     text-decoration: none; }
 
@@ -4396,7 +4396,7 @@ ol {
   .call strong {
     font-weight: bold; }
   .call svg {
-    fill: white;
+    fill: #85d2fb;
     position: absolute;
     bottom: -9px;
     right: 0;
@@ -4500,7 +4500,7 @@ ol {
 .content blockquote {
   padding: 0 1em;
   color: #5C5A5A;
-  border-left: 0.25em solid #f88379; }
+  border-left: 0.25em solid #0673ae; }
 
 .intro {
   display: flex;
@@ -4592,16 +4592,16 @@ ol {
     transform: skewY(-5deg); }
 
 .strip-primary-gradient {
-  background-image: linear-gradient(to right, #f24088, #f88379); }
+  background-image: linear-gradient(to right, #0398e8, #0673ae); }
 
 .strip-primary-gradient-top-bottom {
-  background-image: linear-gradient(to bottom, #f24088, #f88379); }
+  background-image: linear-gradient(to bottom, #0398e8, #0673ae); }
 
 .strip-primary {
-  background-color: #f24088; }
+  background-color: #0398e8; }
 
 .strip-secondary {
-  background-color: #f88379; }
+  background-color: #0673ae; }
 
 .strip-diagonal-right {
   margin-top: -100px;

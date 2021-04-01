@@ -5,6 +5,6 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
 
-# Hello There!
+# Hello There
 
-Our team carries the knowledge needed to build the right solutions that will meet your requirements and exceed all of your expectations.
+We're a couple of tight-knit developers that love doing what they do and have fun while doing it.
