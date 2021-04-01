@@ -1,6 +1,6 @@
 baseURL = "www.example.com"
 languageCode = "en-us"
-title = "Tanomi"
+title = "Tanomi Technologies"
 theme = "hugo-serif-theme"
 
 [params]
