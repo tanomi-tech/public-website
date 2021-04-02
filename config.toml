@@ -13,7 +13,7 @@ title = "Tanomi Technologies"
     hide_view_all_services = false  # set to true to hide the View All Services button
 
   [params.logo]
-    mobile = "images/logo/logo-alt.png"
+    mobile = "images/logo/logo-alt-mobile.png"
     desktop = "images/logo/logo-alt.png"
     desktop_height = "36px"
     alt = "Tanom Technologies"
