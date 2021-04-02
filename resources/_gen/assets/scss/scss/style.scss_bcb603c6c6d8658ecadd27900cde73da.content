@@ -101,11 +101,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #63baca;
+  color: #43b4c1;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #afdce4;
+    color: #90d3da;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -4013,7 +4013,7 @@ html {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 36px;
     height: 3px;
-    background-color: #63baca;
+    background-color: #43b4c1;
     border-radius: 3px;
     position: absolute;
     transition-property: transform;
@@ -4049,7 +4049,7 @@ html {
     transform: translate3d(0, -20px, 0) rotate(-90deg); }
 
 a {
-  color: #63baca; }
+  color: #43b4c1; }
 
 p {
   line-height: 26px;
@@ -4099,7 +4099,7 @@ ol {
     flex: 1 0 0; }
 
 .header {
-  color: #63baca;
+  color: #43b4c1;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -4119,7 +4119,7 @@ ol {
   position: static; }
 
 .footer {
-  background: #63baca;
+  background: #43b4c1;
   padding-top: 15px;
   padding-bottom: 15px; }
   .footer .footer-inner {
@@ -4174,7 +4174,7 @@ ol {
             height: 40px;
             padding: 10px 8px 10px 8px; } }
 .sub-footer {
-  background: #3fa7bb;
+  background: #34929d;
   color: #ffffff;
   padding-top: 15px;
   padding-bottom: 15px; }
@@ -4242,7 +4242,7 @@ ol {
         display: inline-block;
         font-weight: normal;
         text-decoration: none;
-        color: #63baca; }
+        color: #43b4c1; }
         .main-menu > ul > li > a:hover {
           text-decoration: underline; }
       .main-menu > ul > li.active > a {
@@ -4254,7 +4254,7 @@ ol {
 
 .main-menu-mobile {
   position: fixed;
-  background: #63baca;
+  background: #43b4c1;
   top: 0;
   left: 0;
   width: 100%;
@@ -4331,7 +4331,7 @@ ol {
   .hamburger .hamburger-inner,
   .hamburger .hamburger-inner::before,
   .hamburger .hamburger-inner::after {
-    background: #63baca; }
+    background: #43b4c1; }
   .hamburger .hamburger-inner::after {
     width: 18px;
     right: 0; }
@@ -4345,7 +4345,7 @@ ol {
   height: 40px;
   line-height: 40px;
   padding: 0 14px;
-  background: #63baca;
+  background: #43b4c1;
   border-radius: 4px;
   font-size: 14px;
   font-weight: normal;
@@ -4357,7 +4357,7 @@ ol {
   transition: all 0.15s ease; }
   .button:hover {
     color: #ffffff;
-    background-color: #89cbd7;
+    background-color: #69c3ce;
     transform: translateY(-1px);
     text-decoration: none; }
 
@@ -4592,13 +4592,13 @@ ol {
     transform: skewY(-5deg); }
 
 .strip-primary-gradient {
-  background-image: linear-gradient(to right, #63baca, #63d9dd); }
+  background-image: linear-gradient(to right, #43b4c1, #63d9dd); }
 
 .strip-primary-gradient-top-bottom {
-  background-image: linear-gradient(to bottom, #63baca, #63d9dd); }
+  background-image: linear-gradient(to bottom, #43b4c1, #63d9dd); }
 
 .strip-primary {
-  background-color: #63baca; }
+  background-color: #43b4c1; }
 
 .strip-secondary {
   background-color: #63d9dd; }

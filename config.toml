@@ -1,5 +1,6 @@
 baseURL = "www.tanomitech.com"
 languageCode = "en-us"
+theme="hugo-serif-theme"
 title = "Tanomi Technologies"
 
 [params]
@@ -12,10 +13,10 @@ title = "Tanomi Technologies"
     hide_view_all_services = false  # set to true to hide the View All Services button
 
   [params.logo]
-    mobile = "images/logo/logo-mobile.svg"
-    desktop = "images/logo/logo.svg"
+    mobile = "images/logo/logo-alt.png"
+    desktop = "images/logo/logo-alt.png"
     desktop_height = "36px"
-    alt = "Serif - A Hugo Business Theme"
+    alt = "Tanom Technologies"
 
   [params.homepage_meta_tags]
     meta_description = "Tanomi is a software development company focused building reliable software and becoming your trusted partner."
