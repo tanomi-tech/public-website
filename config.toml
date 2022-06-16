@@ -23,7 +23,7 @@ title = "Tanomi Technologies"
     meta_og_title = "Tanomi Technologies | Technology Consulting"
     meta_og_type = "website"
     meta_og_url = "https://tanomitech.com"
-    meta_og_image = "images/landing-tech-2.jpg"
+    meta_og_image = "https://tanomitech.com/images/landing-tech-2.jpg"
     meta_og_description = "Tanomi Technologies is a software development company focused building reliable software and becoming your trusted partner."
     meta_twitter_card = "summary"
 
