@@ -19,12 +19,12 @@ title = "Tanomi Technologies"
     alt = "Tanom Technologies"
 
   [params.homepage_meta_tags]
-    meta_description = "Tanomi is a software development company focused building reliable software and becoming your trusted partner."
-    meta_og_title = "Tanomi Technologies"
+    meta_description = "Tanomi Technologies is a software development company focused building reliable software and becoming your trusted partner."
+    meta_og_title = "Tanomi Technologies | Technology Consulting"
     meta_og_type = "website"
-    meta_og_url = "https://hugo-serif.netlify.app"
-    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-serif-theme/master/images/tn.png"
-    meta_og_description = "Tanomi is a software development company focused building reliable software and becoming your trusted partner."
+    meta_og_url = "https://tanomitech.com"
+    meta_og_image = "images/landing-tech-2.jpg"
+    meta_og_description = "Tanomi Technologies is a software development company focused building reliable software and becoming your trusted partner."
     meta_twitter_card = "summary"
 
   [params.team]
