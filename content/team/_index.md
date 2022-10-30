@@ -1,6 +1,6 @@
 ---
 title: 'Team'
-intro_image: "images/landing-tech-2.jpg"
+intro_image: "images/landing-tech.jpg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 ---
