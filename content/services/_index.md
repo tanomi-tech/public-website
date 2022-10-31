@@ -7,4 +7,4 @@ intro_image_hide_on_mobile: false
 
 # Services that grow with your business
 
-We do a couple of things and you can rely on us to do them very well.
+The web space is our specialty. With our many years of experience and in-depth knowledge, you can rely on us to handle your web projects with the utmost care and consideration for your priorities, as well as find ways to optimize the projects we manage.
