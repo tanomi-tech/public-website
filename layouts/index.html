@@ -55,8 +55,8 @@
 
 
         {{ range $services }}
-        <figure class="col-xs-12 col-sm-6 col-md-3 consulting-service" title="title">
-          <img class="consulting-service__graphic" src="{{ .Params.graphic }}" alt="title services" />
+        <figure class="col-xs-12 col-sm-6 col-md-3 consulting-service" title="{{ .Title }}">
+          <img class="consulting-service__graphic" src="{{ .Params.graphic }}" alt="{{ .Title }} services" />
           <figcaption class="consulting-service__caption">{{ .Title }}</figcaption>
         </figure>
         {{ end }}
