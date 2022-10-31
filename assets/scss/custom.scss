@@ -18,6 +18,8 @@ $steel: #5C5A5A;
     padding: 3rem;
 
     &__caption {
+        font-family:  "Playfair Display", serif, -apple-system;
+        font-size: 1.25rem;
         color: $primary;
         font-weight: bold;
         text-align: center;
@@ -28,7 +30,7 @@ $steel: #5C5A5A;
         width: 160px;
         height: 160px;
         display: block;
-        margin: 0 auto 5rem;
+        margin: 0 auto 2rem;
 
         &:hover {
             ~ .consulting-service__caption {
@@ -40,6 +42,11 @@ $steel: #5C5A5A;
 }
 
 .service-content {
+    .service-title {
+        color: $primary;
+        font-size: 2rem;
+    }
+
     ul, ol {
         margin-block-start: 0;
         margin-block-end: 1rem;
