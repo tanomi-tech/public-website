@@ -1,0 +1,66 @@
+/**
+ * Colors 
+ * (keep in sync with hugo-serif-theme main stylesheet 
+ *  @ "themes/hugo-serif-theme/assets/scss/style.scss")
+ */
+$primary: #43b4c1;
+$secondary: #63d9dd;
+$black: #2f2f41;
+$white: #ffffff;
+$white-offset: #f6f7ff;
+$steel: #5C5A5A;
+
+.consulting-service {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+    &__caption {
+        color: $primary;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__graphic {
+        width: 160px;
+        height: 160px;
+        display: block;
+        margin: 0 auto 5rem;
+
+        &:hover {
+            ~ .consulting-service__caption {
+                cursor: pointer;
+                // opacity: 1;
+            }
+        }
+    }
+}
+
+.service-content {
+    ul, ol {
+        margin-block-start: 0;
+        margin-block-end: 1rem;
+        padding-inline-start: 2rem;
+
+        li {
+            line-height: 1.75;
+        }
+    }
+}
+
+.page-home .wrapper {
+    background: url(../images/landing-tech.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/**
+ * Utilities
+ */
+.button-large {
+    font-size: 1rem;
+    transform: none;
+}
