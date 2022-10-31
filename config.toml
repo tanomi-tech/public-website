@@ -27,9 +27,6 @@ title = "Tanomi Technologies"
     meta_og_description = "Tanomi Technologies is a software development company focused building reliable software and becoming your trusted partner."
     meta_twitter_card = "summary"
 
-  [params.team]
-    summary_large_truncate = 120  # How many characters to include in the summary of the team bios (large layout) before truncating
-
   [params.footer]
     copyright_text = 'Tanomi Technologies'
 
@@ -41,8 +38,8 @@ title = "Tanomi Technologies"
       weight = 1
 
   [[menu.main]]
-      name = "Team"
-      url = "/team/"
+    name = "About"
+    url = "/about/"
       weight = 2
 
   # Footer Menu
@@ -57,11 +54,6 @@ title = "Tanomi Technologies"
       weight = 2
 
   [[menu.footer]]
-    name = "Team"
-    url = "/team"
-      weight = 3
-
-  [[menu.footer]]
     name = "About"
     url = "/about"
-      weight = 4
+      weight = 3
