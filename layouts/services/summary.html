@@ -1,8 +1,13 @@
-<div class="service service-summary">
-    <div class="service-content">
-        <h2 class="service-title">
-            {{ .Title }}
-        </h2>
-        <p>{{ .Content }}</p>
-    </div>
+<div class="service service-summary" id="{{.File.TranslationBaseName}}">
+	<div class="service-content">
+		<h2 class="service-title">
+			{{ .Title }}
+		</h2>
+		{{ if .Params.show_summary }}
+			<p>{{ .Summary }}</p>
+			<a href="{{ .Page.RelPermalink}}">Explore our {{.Title}} services</a>
+		{{ else }}
+			<p>{{ .Content }}</p>
+		{{end}}
+	</div>
 </div>

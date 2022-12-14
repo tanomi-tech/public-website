@@ -51,18 +51,17 @@
 
 
     {{ if not .Site.Params.homepage.hide_view_all_services }}
-    <div class="row justify-content-center">
-
-
+    <h2 class="text-center">{{.Site.Params.homepage.services_heading}}</h2>
+    <div class="row justify-content-lg-between justify-content-center">
         {{ range $services }}
-        <figure class="col-xs-12 col-sm-6 col-md-3 consulting-service" title="{{ .Title }}">
-          <img class="consulting-service__graphic" src="{{ .Params.graphic }}" alt="{{ .Title }} services" />
+        <figure class="col-12 col-sm-6 col-md-4 col-lg-2 consulting-service p-sm-3 m-3 m-sm-0" title="{{ .Title }}">
+          <img class="consulting-service__graphic mb-2" src="{{ .Params.graphic }}" alt="{{ .Title }} services" />
           <figcaption class="consulting-service__caption">{{ .Title }}</figcaption>
         </figure>
         {{ end }}
 
-      <div class="col-auto">
-        <a class="button button-primary button-large" href="{{ "services/" | relURL }}">View All Services</a>
+      <div class="col-12 text-center mt-5">
+        <a class="button d-inline-block m-auto button-primary button-large" href="{{ "services/" | relURL }}">View All Services</a>
       </div>
     </div>
     {{ end }}

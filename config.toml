@@ -10,6 +10,7 @@ title = "Tanomi Technologies"
 
   [params.homepage]
     show_call_box = true
+    services_heading = "What we can help you with"
     hide_view_all_services = false  # set to true to hide the View All Services button
 
   [params.logo]
