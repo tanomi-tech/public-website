@@ -5,7 +5,7 @@
 		</h2>
 		{{ if .Params.show_summary }}
 			<p>{{ .Summary }}</p>
-			<a href="{{ .Page.RelPermalink}}">Explore our {{.Title}} services</a>
+			<a href="{{ .Page.RelPermalink}}" class="button">Explore our {{.Title}} services</a>
 		{{ else }}
 			<p>{{ .Content }}</p>
 		{{end}}
