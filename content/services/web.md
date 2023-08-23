@@ -61,4 +61,4 @@ Want to use a special platform for your site? Need to fine-tune some technical a
 [Contact Us Today](mailto:info@tanomitech.com)
 
 
-*Any work beyond the included items above will be billed at our standard hourly rate. In-house hourly rates start at $100/hr.
+*Any work beyond the included items above will be billed at our standard hourly rate. In-house hourly rates start at $150/hr.
