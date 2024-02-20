@@ -1,7 +1,7 @@
 baseURL = "www.tanomitech.com"
 languageCode = "en-us"
-theme="hugo-serif-theme"
-title = "Tanomi Technologies"
+theme="tailbliss"
+title = "Tanomi"
 
 [params]
   # In most cases you will only want to use either one of these. If you have Google Analytics included in your GTM tags don't put your GA ID here. Otherwise your data might be useless.
