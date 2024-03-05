@@ -1,0 +1,6 @@
+@import url(../../themes/tailbliss/assets/css/style.css);
+
+.bg-primary-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(52 113 141);
+}
