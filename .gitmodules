@@ -6,4 +6,4 @@
 	url = https://github.com/zerostaticthemes/hugo-serif-theme
 [submodule "themes/tailbliss"]
 	path = themes/tailbliss
-	url = git@github.com:nusserstudios/tailbliss
+	url = https://github.com/nusserstudios/tailbliss
