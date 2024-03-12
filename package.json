@@ -1,10 +1,12 @@
 {
 	"scripts": {
+		"dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
 		"postinstall": "npm --prefix ./themes/tailbliss install && pnpm run clean-theme-content",
 		"clean-theme-content": "rimraf ./themes/tailbliss/content/*"
 	},
 	"dependencies": {
 		"postcss-cli": "^11.0.0",
-		"rimraf": "^5.0.5"
+		"rimraf": "^5.0.5",
+		"tailwindcss": "^3.4.1"
 	}
 }

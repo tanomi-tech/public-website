@@ -1,6 +1,13 @@
 @import url(../../themes/tailbliss/assets/css/style.css);
 
+:root {
+    --primary-blue: rgb(52 113 141);
+}
+
 .bg-primary-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(52 113 141);
+    background-color: var(--primary-blue);
+}
+
+.hover\:bg-primary-600:hover {
+    background-color: var(--primary-blue);
 }
