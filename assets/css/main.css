@@ -4,6 +4,10 @@
     --primary-blue: rgb(52 113 141);
 }
 
+:target {
+    scroll-margin-top: 5vmax;
+}
+
 .bg-primary-600 {
     background-color: var(--primary-blue);
 }
