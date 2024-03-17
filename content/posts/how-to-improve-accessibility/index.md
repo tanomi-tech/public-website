@@ -19,11 +19,11 @@ While I can go over the many reasons why it shouldn't be overlooked, and offer u
 
 `alt` attributes make image descriptions accessible to assistive technologies that can be provided to users in many ways.
 
-What you might not know is that `alt` attributes should be applied to **all** images, regardless whether they're decorative or not.
+What you might not know is that `alt` attributes should be applied to **all** images, regardless of whether they're decorative or not.
 
-When there's a no `alt` attribute attached to an `img` element, there's the possibility that some assistive technologies may use the file name or path instead to represent the image instead. This can negatively impact user's experience because file names or its location may be very long and arbitrary, and are not a reliable source to communicate the image's content.
+When there's a no `alt` attribute attached to an `img` element, there's the possibility that some assistive technologies may use the file name or path to represent the image instead. This can negatively impact user's experience because file names or its location may be very long and arbitrary, and are not a reliable source to communicate the image's content.
 
-Empty `alt` attributes on images communicate, at the very least, that images are decorative and provide no information to understand the surrounding content on the page.
+Empty `alt` attributes on images communicate, at the very least, that they are decorative, provide no information to understand the surrounding content on the page, and assistive technologies usually skip describing it to users.
 
 ## Use HTML buttons for actions, and anchors for navigation
 
@@ -53,7 +53,7 @@ Using the correct HTML elements for their intended purposes will not only improv
 
 ## Remove focusable elements that are invisible
 
-Off-canvas menus, modals, hidden dropdowns, are examples of a common UI design pattern to conceal information users and have them toggle when to display it or not.
+Off-canvas menus, modals, hidden dropdowns, are examples of a common UI design patterns to conceal information to users and have them toggle when to display it or not.
 
 While these elements are visually hidden away from users current view, there is a possibility that these are still focusable through keyboard navigation.
 
