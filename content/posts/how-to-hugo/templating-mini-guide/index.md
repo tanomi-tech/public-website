@@ -13,7 +13,7 @@ tags:
   - JAMstack
   - 'Static Site Generators'
 ---
-Hugo templates are based on the `html/template` and `text/template` Go libraries. Most, if not all reference documentation for these libraries is applicable to Hugo as well.
+Hugo templates are based on the `go-html-template/template` and `text/template` Go libraries. Most, if not all reference documentation for these libraries is applicable to Hugo as well.
 
 Topics covered in this article:
 - [Context](#context)
@@ -27,7 +27,8 @@ Topics covered in this article:
 ## Context
 
 Context is the data passed to a template. Current context of a template is always represented with a dot (`.`) and can be used like so:
-```html
+
+```go-html-template
 <p>Hi my name is {{ .Name }}</p>
 ```
 
@@ -49,7 +50,7 @@ params:
 
 And in your Hugo post template, you have the following:
 `layouts/_default/single.html`
-```html
+```go-html-template
 {{ with .Params.product }}
     <span id="product-{{ .id }}">{{ .label }} (${{ .cost }})</span>
 {{ end }}
@@ -73,7 +74,7 @@ There are 2 types of template files.
 We can define blocks in __base templates__, and then compose them together in a __site template__ (and optionally override their base template content).
 
 `layouts/_default/baseof.html`
-```html
+```go-html-template
 <main>
 {{ block "main" . }}
   <span>I AM THE DEFAULT</span>
@@ -88,7 +89,7 @@ Here we have defined the "main" block's location in a base template and given it
 ## Global Site Data in Templates
 
 We can access data related to the site's main configuration using `.Site` in a template like so:
-```html
+```go-html-template
 {{ with .Site.Author }}
     <p>This site was built by {{ . }}</p>
 {{ end }}
@@ -149,7 +150,7 @@ Collection:
 ```
 
 ...you can bind it in context using `range`/`with` blocks and the `index` function in a template like so:
-```html
+```go-html-template
 {{ with index .Site.Data "my-magnets" }}
 <span>{{ .Title }}</span>
 <ul>
@@ -161,7 +162,7 @@ Collection:
 ```
 
 __Result__
-```html
+```go-html-template
 <span>My Magnets</span>
 <ul>
     <li>magnet 1</li>
@@ -179,7 +180,7 @@ Here are some examples.
 
 
 ### Get pages with `"hobbies"` as a tag
-```html
+```go-html-template
 <h3>Posts related to Hobbies</h3>
 <ul>
     {{ range (index .Site.Taxonomies.tags (lower "hobbies")).Pages }}
@@ -189,7 +190,7 @@ Here are some examples.
 ```
 
 ### Get pages that are "posts"
-```html
+```go-html-template
 {{ $posts := where .Site.RegularPages "Type" "posts" }}
 {{ range $posts }}
 <div class="post">
@@ -199,14 +200,14 @@ Here are some examples.
 ```
 
 Sort them by date using `.ByDate`:
-```html
+```go-html-template
 {{ range $posts.ByDate }}
 <!-- ... -->
 {{ end }}
 ```
 
 Sort them by date in descending order using `.Reverse`:
-```html
+```go-html-template
 {{ range $posts.ByDate.Reverse }}
 <!-- ... -->
 {{ end }}
@@ -215,7 +216,7 @@ Sort them by date in descending order using `.Reverse`:
 
 ### Get pages published in the last 30 days
 Here we wrap a base `where` statement in another `where` statement together to further refine results. 
-```html
+```go-html-template
 {{ $latest := where (
       where .Site.RegularPages "Type" "posts"
     ) 
@@ -238,7 +239,7 @@ params:
 ```
 
 And in our template:
-```html
+```go-html-template
 <section>
     <div>Product Categories</div>
     {{ range .Site.RegularPages.GroupByParam "product_category" }}
