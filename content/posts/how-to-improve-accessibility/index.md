@@ -6,7 +6,7 @@ draft: false
 weight: 1
 author: Josue Arce
 authorimage: ../assets/images/josue.png
-tags: ['Blog', 'Accessibility']
+tags: ['WCAG 2.2', 'Accessibility']
 ---
 
 Imagine This: You're strolling through a crowded marketplace, browsing through stalls filled with things you know you probably don't need. But instead of clearly labeled signs and easy-to-navigate pathways, everything's a jumble. You're left feeling frustrated and ready to bail. That's kind of what it's like for folks who need a little extra help when navigating the web.
