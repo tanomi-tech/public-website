@@ -3,6 +3,7 @@ title: 'Hugo Templating Mini-Guide and Cheat Sheet'
 series: 'How to Hugo'
 featured_image: 'media/post-header.jpg'
 author: 'Jesse Barkdoll'
+authorimage: '../assets/images/jesse.png'
 date: 2024-03-18
 draft: false
 type: posts
