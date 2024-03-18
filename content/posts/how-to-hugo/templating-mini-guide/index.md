@@ -1,11 +1,11 @@
 ---
 title: 'Hugo Templating Mini-Guide and Cheat Sheet'
 series: 'How to Hugo'
+featured_image: 'media/post-header.jpg'
+author: 'Jesse Barkdoll'
 date: 2024-03-18
 draft: false
 type: posts
-params:
-  product_category: kitchenware
 tags:
   - Hugo
   - Go (Golang)
@@ -16,7 +16,7 @@ Hugo templates are based on the `html/template` and `text/template` Go libraries
 
 Topics covered in this article:
 - [Context](#context)
-	- [Changing Context using `range` and `with` blocks](#changing-context-using-range-and-with-blocks)
+    - [Changing Context using `range` and `with` blocks](#changing-context-using-range-and-with-blocks)
 - [Blocks](#blocks)
 - [Global Site Data in Templates](#global-site-data-in-templates)
 - [Custom Data Sources](#custom-data-sources)
@@ -39,10 +39,10 @@ Let's say you have a product listing post (markdown file) in your Hugo site with
 `cheese.md`
 ```yaml
 params:
-	product:
-		id: 32
-		label: 'Sharp Cheddar'
-		price: 2.99
+    product:
+        id: 32
+        label: 'Sharp Cheddar'
+        price: 2.99
 ```
 
 
@@ -50,7 +50,7 @@ And in your Hugo post template, you have the following:
 `layouts/_default/single.html`
 ```html
 {{ with .Params.product }}
-	<span id="product-{{ .id }}">{{ .label }} (${{ .cost }})</span>
+    <span id="product-{{ .id }}">{{ .label }} (${{ .cost }})</span>
 {{ end }}
 ```
 
@@ -63,7 +63,12 @@ __RESULT:__ the template should parse to the following snippet when you build th
 
 
 ## Blocks
-Blocks can be used to build reusable template chunks in your base templates. You can then compose a site template together by specifying use of those blocks to override the base template.
+Blocks are reusable chunks of Hugo/Go template markup.
+
+There are 2 types of template files. 
+- __Base templates__: used to define blocks 
+- __Site templates__: used to compose blocks together into layouts
+Blocks can be used to build reusable template chunks in __base templates__. You can then compose a __site template__ together by specifying use of those blocks to override the base template.
 
 ```html
 <main>
@@ -82,7 +87,7 @@ Here we have defined the main block's location in a base template and given it d
 We can access data related to the site's main configuration using `.Site` in a template like so:
 ```html
 {{ with .Site.Author }}
-	<p>This site was built by {{ . }}</p>
+    <p>This site was built by {{ . }}</p>
 {{ end }}
 ```
 
@@ -145,9 +150,9 @@ Collection:
 {{ with index .Site.Data "my-magnets" }}
 <span>{{ .Title }}</span>
 <ul>
-	{{ range .Collection }}
-	<li>{{ . }}</li>
-	{{ end }}
+    {{ range .Collection }}
+    <li>{{ . }}</li>
+    {{ end }}
 </ul>
 {{ end }}
 ```
@@ -156,10 +161,10 @@ __Result__
 ```html
 <span>My Magnets</span>
 <ul>
-	<li>magnet 1</li>
-	<li>magnet 2</li>
-	<li>magnet 3</li>
-	<li>magnet 4</li>
+    <li>magnet 1</li>
+    <li>magnet 2</li>
+    <li>magnet 3</li>
+    <li>magnet 4</li>
 </ul>
 ```
 
@@ -174,9 +179,9 @@ Here are some examples.
 ```html
 <h3>Posts related to Hobbies</h3>
 <ul>
-	{{ range (index .Site.Taxonomies.tags (lower "hobbies")).Pages }}
-	<li>{{ .LinkTitle }}</li>
-	{{ end }}
+    {{ range (index .Site.Taxonomies.tags (lower "hobbies")).Pages }}
+    <li>{{ .LinkTitle }}</li>
+    {{ end }}
 </ul>
 ```
 
@@ -185,7 +190,7 @@ Here are some examples.
 {{ $posts := where .Site.RegularPages "Type" "posts" }}
 {{ range $posts }}
 <div class="post">
-	{{ .Title }}
+    {{ .Title }}
 </div>
 {{ end }}
 ```
@@ -209,9 +214,9 @@ Sort them by date in descending order using `.Reverse`:
 Here we wrap a base `where` statement in another `where` statement together to further refine results. 
 ```html
 {{ $latest := where (
-	  where .Site.RegularPages "Type" "posts"
-	) 
-	"Date" "ge" (now.AddDate 0 0 -30) 
+      where .Site.RegularPages "Type" "posts"
+    ) 
+    "Date" "ge" (now.AddDate 0 0 -30) 
 }}
 {{ range $latest.ByDate.Reverse }}
 <div class="post">{{ .Date | time.Format "2006-01-02" }} / {{ .Title }}</div>
@@ -232,15 +237,15 @@ params:
 And in our template:
 ```html
 <section>
-	<div>Product Categories</div>
-	{{ range .Site.RegularPages.GroupByParam "product_category" }}
-	<span>{{ .Key | title }}</span>
-	<ul>
-		{{ range .Pages }}
-		<li>{{ .Title }}</li>
-		{{ end }}
-	</ul>
-	{{ end }}
+    <div>Product Categories</div>
+    {{ range .Site.RegularPages.GroupByParam "product_category" }}
+    <span>{{ .Key | title }}</span>
+    <ul>
+        {{ range .Pages }}
+        <li>{{ .Title }}</li>
+        {{ end }}
+    </ul>
+    {{ end }}
 </section>
 ```
 
