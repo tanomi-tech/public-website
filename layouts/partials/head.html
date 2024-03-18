@@ -25,6 +25,3 @@
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
 {{ end }}
 <script defer src="https://us.umami.is/script.js" data-website-id="58075303-8a3f-4f5a-826f-a5c1e7ff7fff"></script>
-{{ range resources.Match "/js/*.js" }}
-    <script defer src="{{ .RelPermalink }}" type="text/javascript"></script>
-{{ end }}
