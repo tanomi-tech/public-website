@@ -1,5 +1,5 @@
 ---
-title: "How to Easily Improve Your Website's accessibility"
+title: "How to Easily Improve Your Website's Accessibility"
 featured_image: a11y.jpg
 date: 2024-03-15T04:14:54-08:00
 draft: false
