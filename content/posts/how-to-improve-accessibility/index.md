@@ -1,6 +1,6 @@
 ---
 title: "How to Easily Improve Your Website's accessibility"
-featured_image: ../assets/images/a11y.jpg
+featured_image: a11y.jpg
 date: 2024-03-15T04:14:54-08:00
 draft: false
 weight: 1
