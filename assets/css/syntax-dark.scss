@@ -1,3 +1,5 @@
+// NOTE: comment color style rules have also been customized 
+//  from the originally generated "vulcan" theme.
 .dark {
     /* Background */ .bg { color: #c9c9c9; background-color: #282c34; }
     /* PreWrapper */ .chroma { color: #c9c9c9; background-color: #282c34; }
@@ -65,10 +67,10 @@
     /* Operator */ .chroma .o { color: #bc74c4 }
     /* OperatorWord */ .chroma .ow { color: #bc74c4 }
     /* Punctuation */ .chroma .p { color: #56b6c2 }
-    /* Comment */ .chroma .c { color: #3e4460 }
-    /* CommentHashbang */ .chroma .ch { color: #3e4460; font-style: italic }
-    /* CommentMultiline */ .chroma .cm { color: #3e4460 }
-    /* CommentSingle */ .chroma .c1 { color: #3e4460 }
+    /* Comment */ .chroma .c { color: #7c7d7d; }
+    /* CommentHashbang */ .chroma .ch { color: #7c7d7d; font-style: italic }
+    /* CommentMultiline */ .chroma .cm { color: #7c7d7d; }
+    /* CommentSingle */ .chroma .c1 { color: #7c7d7d; }
     /* CommentSpecial */ .chroma .cs { color: #bc74c4; font-style: italic }
     /* CommentPreproc */ .chroma .cp { color: #7fbaf5 }
     /* CommentPreprocFile */ .chroma .cpf { color: #7fbaf5 }
