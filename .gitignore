@@ -3,3 +3,4 @@ resources/_gen/
 node_modules/
 **/node_modules/
 public/
+.DS_Store
