@@ -1,0 +1,10 @@
+{{ $light := resources.Get "css/syntax-light.scss" | toCSS | minify | fingerprint }}
+{{ $dark := resources.Get "css/syntax-dark.scss" | toCSS | minify | fingerprint }}
+
+<style>
+/* Light Theme Styles (default) */
+{{ $light.Content | safeCSS }}
+
+/* Dark Theme Styles */
+{{ $dark.Content | safeCSS }}
+</style>
