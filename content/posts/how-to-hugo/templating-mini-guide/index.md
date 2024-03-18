@@ -66,10 +66,12 @@ __RESULT:__ the template should parse to the following snippet when you build th
 Blocks are reusable chunks of Hugo/Go template markup.
 
 There are 2 types of template files. 
-- __Base templates__: used to define blocks 
+- __Base templates__: used to define blocks; the default base template is located at `layouts/_default/baseof.html`
 - __Site templates__: used to compose blocks together into layouts
-Blocks can be used to build reusable template chunks in __base templates__. You can then compose a __site template__ together by specifying use of those blocks to override the base template.
 
+We can define blocks in __base templates__, and then compose them together in a __site template__ (and optionally override their base template content).
+
+`layouts/_default/baseof.html`
 ```html
 <main>
 {{ block "main" . }}
@@ -77,7 +79,7 @@ Blocks can be used to build reusable template chunks in __base templates__. You 
 {{ end }}
 </main>
 ```
-Here we have defined the main block's location in a base template and given it default content when no content is rendered for this block in an inheriting site template. Notice how the context dot (`.`) is at the end of the block definition open statement.
+Here we have defined the "main" block's location in a base template and given it default content when no content is rendered for this block in an inheriting site template. Notice how the context dot (`.`) is at the end of the block definition open statement.
 
 
 
@@ -227,7 +229,7 @@ This entire query handles the following:
 - sorts pages by date (`.Pages.ByDate`)
 - returns pages that are greater than or equal to (`ge`) the date matching 30 days ago (`(now.AddDate 0 0 -30)`)
 
-### Get pages group matching a parameter
+### Group pages by a custom parameter (in YAML frontmatter)
 In this case, the parameter is `product_category`. Markdown files with a `product_category` param will be grouped by it's value. So if we have a few posts with the `params.product_category` value set to `'kitchenware'`, they will be grouped here and you can iterate over them for display in your template.
 ```yaml
 params:
