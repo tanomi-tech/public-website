@@ -2773,6 +2773,16 @@ EmojiSymbols;
   background-color: var(--primary-blue);
 }
 
-.hover\:bg-primary-600:hover {
+.bg-primary-800 {
   background-color: var(--primary-blue);
+  filter: brightness(95%);
+}
+
+.hover\:bg-primary-600:hover,
+.hover\:bg-primary-800:hover {
+  background-color: var(--primary-blue);
+}
+
+.hover\:bg-primary-800:hover {
+  filter: brightness(95%);
 }
