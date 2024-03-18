@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 ['https:', 'http:'].includes(a.protocol) 
                 && a.hostname !== location.hostname
             ) {
-                console.log(a.href);
                 a.target = '_blank';
             }
         }
