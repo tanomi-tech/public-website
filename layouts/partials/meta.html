@@ -8,6 +8,8 @@
 <meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta property="og:description"
       content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="twitter:description"
+      content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:locale" content="en">
@@ -17,4 +19,5 @@
 <meta property="og:image" content="{{ if .Params.featured_image }}{{ $featured_image_location | absURL }}{{ else }}{{ .Site.Params.og_image | relURL }}{{ end }}" />
 <meta property="og:image:secure_url" content="{{ if .Params.featured_image }}{{ $featured_image_location | absURL }}{{ else }}{{ .Site.Params.og_image | absURL }}{{ end }}" />
 <meta property="og:type" content="{{if .IsHome}}website{{else}}article{{end}}" />
+<meta property="twitter:image" content="{{ if .Params.featured_image }}{{ $featured_image_location | absURL }}{{ else }}{{ .Site.Params.og_image | relURL }}{{ end }}" />
 {{ end }}
