@@ -18,8 +18,8 @@
     {{ $featured_image_location := (print .Site.BaseURL .File.Dir .Params.featured_image)}}
 <!-- <meta property="og:image" content="{{ if .Params.featured_image }}{{ $featured_image_location | absURL }}{{ else }}{{ .Site.Params.og_image | relURL }}{{ end }}" />
 <meta property="og:image:secure_url" content="{{ if .Params.featured_image }}{{ $featured_image_location | absURL }}{{ else }}{{ .Site.Params.og_image | absURL }}{{ end }}" /> -->
-<meta property="og:image" content="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg" />
-<meta property="og:image:secure_url" content="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg" />
+<meta property="og:image" content="/posts/how-to-improve-accessibility/cat.jpg" />
+<meta property="og:image:secure_url" content="/posts/how-to-improve-accessibility/cat.jpg" />
 <meta property="og:type" content="{{if .IsHome}}website{{else}}article{{end}}" />
 <meta property="twitter:image" content="{{ if .Params.featured_image }}{{ $featured_image_location }}{{ else }}{{ .Site.Params.og_image | relURL }}{{ end }}" />
 {{ end }}
