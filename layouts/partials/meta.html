@@ -14,6 +14,7 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:locale" content="en">
 <meta property="twitter:card" content="summary_large_image">
+test - {{.Site.BaseURL}}
 {{ if .IsPage}}
     {{ $featured_image_location := (print .Site.BaseURL .File.Dir .Params.featured_image)}}
 <meta property="og:image" content="{{ if .Params.featured_image }}{{ $featured_image_location | absURL }}{{ else }}{{ .Site.Params.og_image | relURL }}{{ end }}" />
