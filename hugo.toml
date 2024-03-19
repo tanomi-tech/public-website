@@ -1,4 +1,4 @@
-baseURL = "www.tanomitech.com"
+baseURL = "https://tanomitech.com/"
 languageCode = "en-us"
 theme="tailbliss"
 title = "Tanomi Technologies"
