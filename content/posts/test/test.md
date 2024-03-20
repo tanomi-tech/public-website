@@ -1,4 +1,3 @@
-
 ---
 title: "Test"
 featured_image: a11y.jpg
