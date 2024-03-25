@@ -2832,16 +2832,31 @@ EmojiSymbols;
 /* end Syntax Highlighting fixups */
 
 .codeblock-label {
-  line-height: 1;
+  margin-top: 1.7142857em;
+  font-size: .9em;
+}
+
+.codeblock-label code::before {
+  content: '📄';
+  margin-right: 0.2em;
+  font-size: 1.3em;
+  position: relative;
+  top: 2px;
 }
 
 .codeblock-label code {
   border-radius: .175rem .175rem 0 0;
-  padding: 0.1em 0.5em 0.2em;
-  position: relative;
-  bottom: 4px;
+  padding: 0.4em 0.5em 0.6em;
   color: var(--tw-prose-code);
   background-color: var(--tw-prose-pre-bg);
+  border-bottom-width: 0px;
+  position: relative;
+  top: 1px;
+}
+
+.highlight {
+  position: relative;
+  z-index: 20;
 }
 
 .codeblock-label + .highlight .chroma {
