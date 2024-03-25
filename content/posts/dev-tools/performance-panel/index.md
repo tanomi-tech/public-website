@@ -103,7 +103,7 @@ using Vite and RxJS.
 ![preview of example project](media/example/1.png)
 Here we use RxJS observables to test multiple elements being updated by the browser every 1 millisecond.{{< sup index="[1]" href="#footnotes" >}}
 
-Here is the click event handler that is set up to strigger a rapid update of counter values for all 12 counter elements (marked with class `"counter"`)
+Here is the click event handler that is set up to trigger a rapid update of counter values for all 12 counter elements (marked with class `"counter"`)
 
 {{< codeblocklabel "main.js" >}}
 ```javascript
