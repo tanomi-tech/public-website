@@ -8,7 +8,7 @@ featured_image_details:
 author: 'Jesse Barkdoll'
 authorimage: '../assets/images/jesse.png'
 date: 2024-03-25
-draft: true
+draft: false
 type: posts
 tags:
   - Chrome
@@ -147,11 +147,31 @@ To record a profile, click record, activate page code to make the browser perfor
 
 ### Analyzing a DOM Event
 
-{{< video src="media/example/3-code-call-in-main-thread.mp4" type="video/mp4" poster="media/example/3-poster.png" >}}
+Below, we can see a small amount of information on our click event (Pointer event) and its timings when locating it on the Interactions track.
 
-Here we zoom into where activity picks up on the main thread and we locate the click handler function, 
+{{< figure src="media/example/3-event-interactions-track.png" alt="bottom panel summary tab" >}}
+
+For more in-depth information, we can zoom into where activity picks up on the main thread (by using the Main track) and we locate the click handler function, 
 which is defined anonymously in our `main.js` code above. We are able to see it under the label "(anonymous)".
 
+{{< video src="media/example/3-code-call-in-main-thread.mp4" type="video/mp4" poster="media/example/3-poster.png" >}}
+
+
+In `Bottom Panel > Bottom Up` or `Bottom Panel > Event Log`, we can see the entire call stack's function 
+cascade of how we get from Click event to our own code. Bottom up will show you from the top 
+of the stack all the way to the origin of the execution cascade.
+
+The `Summary` tab shows us information on the specific call like its total runtime, 
+a distribution chart of the runtime between load time, self runtime, and runtime 
+of child function calls.
+
+{{< figure src="media/example/4-bottom-panel-summary.png" alt="bottom panel summary tab" >}}
+
+
+## Closing Thoughts
+Although there is no specific performance bottleneck we need to diagnose here, 
+I hope this overview of how the performance panel can prove useful for devs who need more insights 
+on troubleshooting jittery UI transitions, animations, and table sort times in their apps.
 
 
 ## Footnotes
