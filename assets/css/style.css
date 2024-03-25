@@ -2832,26 +2832,44 @@ EmojiSymbols;
 /* end Syntax Highlighting fixups */
 
 .codeblock-label {
+  display: flex;
+  flex-flow: row nowrap;
   margin-top: 1.7142857em;
   font-size: .9em;
+  max-width: 90%;
+  overflow: hidden;
 }
 
 .codeblock-label code::before {
   content: '📄';
-  margin-right: 0.2em;
+  position: sticky;
+  padding: 0 0.2em;
   font-size: 1.3em;
-  position: relative;
-  top: 2px;
+  top: 3px;
+  left: 0;
+  background-color: var(--tw-prose-pre-bg);
+}
+
+.codeblock-label::-webkit-scrollbar,
+.codeblock-label code::-webkit-scrollbar {
+  display: none;
+}
+
+.codeblock-label:hover,
+.codeblock-label:hover code {
+  overflow-x: auto;
 }
 
 .codeblock-label code {
   border-radius: .175rem .175rem 0 0;
-  padding: 0.4em 0.5em 0.6em;
+  padding-right: .5em;
   color: var(--tw-prose-code);
   background-color: var(--tw-prose-pre-bg);
   border-bottom-width: 0px;
   position: relative;
   top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .highlight {
@@ -2864,6 +2882,7 @@ EmojiSymbols;
   border-radius: 0 .375rem .375rem .375rem;
 }
 
-.codeblock-label code, .highlight .chroma {
+.codeblock-label code, 
+.highlight .chroma {
   border: 1px solid var(--prose-pre-border);
 }
