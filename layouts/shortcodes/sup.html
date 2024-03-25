@@ -1,0 +1,3 @@
+<sup>{{ if .Get "href" }}<a href="{{ .Get "href" }}">{{ end }}{{ 
+    .Get "index" | markdownify 
+}}{{ if .Get "href" }}</a>{{ end }}</sup>
