@@ -1,10 +1,13 @@
 ---
 title: 'Profiling Web Performance in Browser Dev Tools'
 series: 'Know Your Dev Tools'
-featured_image: 'media/post-header.jpg'
+featured_image: 'media/post-header.png'
+featured_image_details:
+  author: Fatih Turan
+  href: https://www.pexels.com/photo/two-military-fighters-aircraft-against-clear-blue-sky-16620310/
 author: 'Jesse Barkdoll'
 authorimage: '../assets/images/jesse.png'
-date: 2024-03-24
+date: 2024-03-25
 draft: true
 type: posts
 tags:
@@ -13,6 +16,7 @@ tags:
   - frontend
   - 'developer tools'
   - performance
+  - 'web browsers'
 ---
 
 
