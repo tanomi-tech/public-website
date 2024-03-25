@@ -2786,3 +2786,39 @@ EmojiSymbols;
 .hover\:bg-primary-800:hover {
   filter: brightness(95%);
 }
+
+/** Syntax Highlighting fixups with tailwind "prose" and variables */
+
+.prose {
+  --tw-prose-code: #c30;
+  --tw-prose-pre-bg: #f0f3f3;
+}
+
+.dark .prose {
+  --tw-prose-code: #e9995e;
+  --tw-prose-pre-bg: #111827;
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  border-radius: 2px;
+  color: var(--tw-prose-code);
+  background-color: var(--tw-prose-pre-bg);
+  padding: 0 .15em .1em .15em;
+}
+
+.prose :where(pre code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: unset;
+  content: none;
+  background-color: unset;
+  padding: unset;
+}
+
+/* Override to hide backticks */
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
+  content: none;
+  background-color: transparent;
+}
+
+/* end Syntax Highlighting fixups */
