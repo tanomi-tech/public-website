@@ -2790,6 +2790,7 @@ EmojiSymbols;
 /** Syntax Highlighting fixups with tailwind "prose" and variables */
 
 .prose {
+  --tw-prose-links: #818cf8;
   --tw-prose-code: #c30;
   --tw-prose-pre-bg: #f0f3f3;
 }
