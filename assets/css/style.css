@@ -2792,12 +2792,19 @@ EmojiSymbols;
 .prose {
   --tw-prose-links: #818cf8;
   --tw-prose-code: #c30;
-  --tw-prose-pre-bg: #f0f3f3;
+  --tw-prose-pre-bg: #ededed;
+  /* Custom */
+  --prose-pre-border: #dcdcdc;
+  --codeblock-label-border: #7c7d7d
+
 }
 
 .dark .prose {
   --tw-prose-code: #e9995e;
   --tw-prose-pre-bg: #111827;
+  /* Custom */
+  --prose-pre-border: #333947;
+  --codeblock-label-border: #09f;
 }
 
 .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
@@ -2823,3 +2830,25 @@ EmojiSymbols;
 }
 
 /* end Syntax Highlighting fixups */
+
+.codeblock-label {
+  line-height: 1;
+}
+
+.codeblock-label code {
+  border-radius: .175rem .175rem 0 0;
+  padding: 0.1em 0.5em 0.2em;
+  position: relative;
+  bottom: 4px;
+  color: var(--tw-prose-code);
+  background-color: var(--tw-prose-pre-bg);
+}
+
+.codeblock-label + .highlight .chroma {
+  margin-top: 0;
+  border-radius: 0 .375rem .375rem .375rem;
+}
+
+.codeblock-label code, .highlight .chroma {
+  border: 1px solid var(--prose-pre-border);
+}
