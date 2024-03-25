@@ -49,7 +49,8 @@ params:
 
 
 And in your Hugo post template, you have the following:
-`layouts/_default/single.html`
+
+{{< codeblocklabel "layouts/_default/single.html" >}}
 ```go-html-template
 {{ with .Params.product }}
     <span id="product-{{ .id }}">{{ .label }} (${{ .cost }})</span>
@@ -73,7 +74,7 @@ There are 2 types of template files.
 
 We can define blocks in __base templates__, and then compose them together in a __site template__ (and optionally override their base template content).
 
-`layouts/_default/baseof.html`
+{{< codeblocklabel "layouts/_default/baseof.html" >}}
 ```go-html-template
 <main>
 {{ block "main" . }}
@@ -139,7 +140,8 @@ Well, there is the `data/` directory for this exact reason. You can add static d
 - XML (`.xml`)
 
 If you had the following file in your Hugo project's `data/` directory...
-`data/my-magnets.yaml`
+
+{{< codeblocklabel "data/my-magnets.yaml" >}}
 ```yaml
 Title: 'My Magnets'
 Collection:
