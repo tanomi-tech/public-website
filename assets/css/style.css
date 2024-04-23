@@ -44,7 +44,7 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
@@ -89,7 +89,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -1092,12 +1092,24 @@ video {
   border-width: 0;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
+.static {
+  position: static;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .inset-0 {
@@ -1143,6 +1155,10 @@ video {
 
 .col-span-6 {
   grid-column: span 6 / span 6;
+}
+
+.col-span-full {
+  grid-column: 1 / -1;
 }
 
 .-mx-5 {
@@ -1259,8 +1275,16 @@ video {
   display: inline-flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -1586,6 +1610,11 @@ video {
   background-color: rgb(48 52 236 / var(--tw-bg-opacity));
 }
 
+.bg-primary-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 17 158 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1606,7 +1635,7 @@ video {
 
 .object-fill {
   -o-object-fit: fill;
-  object-fit: fill;
+     object-fit: fill;
 }
 
 .p-2 {
@@ -1865,6 +1894,11 @@ video {
   letter-spacing: -0.025em;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
@@ -1991,6 +2025,10 @@ video {
   --tw-ring-color: rgb(212 212 216 / 0.4);
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -2069,6 +2107,132 @@ EmojiSymbols;
 }
 
 /* Custom CSS end */
+
+:root {
+  --primary-blue: rgb(52 113 141);
+}
+
+:target {
+  scroll-margin-top: 5vmax;
+}
+
+.bg-primary-600 {
+  background-color: var(--primary-blue);
+}
+
+.bg-primary-800 {
+  background-color: var(--primary-blue);
+  filter: brightness(95%);
+}
+
+.hover\:bg-primary-600:hover,
+.hover\:bg-primary-800:hover {
+  background-color: var(--primary-blue);
+}
+
+.hover\:bg-primary-800:hover {
+  filter: brightness(95%);
+}
+
+/** Syntax Highlighting fixups with tailwind "prose" and variables */
+
+.prose {
+  --tw-prose-links: #818cf8;
+  --tw-prose-code: #c30;
+  --tw-prose-pre-bg: #ededed;
+  /* Custom */
+  --prose-pre-border: #dcdcdc;
+  --codeblock-label-border: #7c7d7d
+
+}
+
+.dark .prose {
+  --tw-prose-code: #e9995e;
+  --tw-prose-pre-bg: #111827;
+  /* Custom */
+  --prose-pre-border: #333947;
+  --codeblock-label-border: #09f;
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  border-radius: 2px;
+  color: var(--tw-prose-code);
+  background-color: var(--tw-prose-pre-bg);
+  padding: 0 .15em .1em .15em;
+}
+
+.prose :where(pre code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: unset;
+  content: none;
+  background-color: unset;
+  padding: unset;
+}
+
+/* Override to hide backticks */
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
+  content: none;
+  background-color: transparent;
+}
+
+/* end Syntax Highlighting fixups */
+
+.codeblock-label {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 1.7142857em;
+  font-size: .9em;
+  max-width: 90%;
+  overflow: hidden;
+}
+
+.codeblock-label code::before {
+  content: '📄';
+  position: sticky;
+  padding: 0 0.2em;
+  font-size: 1.3em;
+  top: 3px;
+  left: 0;
+  background-color: var(--tw-prose-pre-bg);
+}
+
+.codeblock-label::-webkit-scrollbar,
+.codeblock-label code::-webkit-scrollbar {
+  display: none;
+}
+
+.codeblock-label:hover,
+.codeblock-label:hover code {
+  overflow-x: auto;
+}
+
+.codeblock-label code {
+  border-radius: .175rem .175rem 0 0;
+  padding-right: .5em;
+  color: var(--tw-prose-code);
+  background-color: var(--tw-prose-pre-bg);
+  border-bottom-width: 0px;
+  position: relative;
+  top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.highlight {
+  position: relative;
+  z-index: 20;
+}
+
+.codeblock-label + .highlight .chroma {
+  margin-top: 0;
+  border-radius: 0 .375rem .375rem .375rem;
+}
+
+.codeblock-label code, 
+.highlight .chroma {
+  border: 1px solid var(--prose-pre-border);
+}
 
 :is(.dark .dark\:prose-invert) {
   --tw-prose-body: var(--tw-prose-invert-body);
@@ -2214,6 +2378,11 @@ EmojiSymbols;
 
 .group:focus .group-focus\:opacity-70 {
   opacity: 0.7;
+}
+
+:is(.dark .dark\:bg-black) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:bg-gray-800) {
@@ -2558,6 +2727,11 @@ EmojiSymbols;
     line-height: 1;
   }
 
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2664,6 +2838,10 @@ EmojiSymbols;
     max-width: none;
   }
 
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -2734,6 +2912,10 @@ EmojiSymbols;
     text-align: left;
   }
 
+  .lg\:text-center {
+    text-align: center;
+  }
+
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -2759,130 +2941,4 @@ EmojiSymbols;
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-}
-
-:root {
-  --primary-blue: rgb(52 113 141);
-}
-
-:target {
-  scroll-margin-top: 5vmax;
-}
-
-.bg-primary-600 {
-  background-color: var(--primary-blue);
-}
-
-.bg-primary-800 {
-  background-color: var(--primary-blue);
-  filter: brightness(95%);
-}
-
-.hover\:bg-primary-600:hover,
-.hover\:bg-primary-800:hover {
-  background-color: var(--primary-blue);
-}
-
-.hover\:bg-primary-800:hover {
-  filter: brightness(95%);
-}
-
-/** Syntax Highlighting fixups with tailwind "prose" and variables */
-
-.prose {
-  --tw-prose-links: #818cf8;
-  --tw-prose-code: #c30;
-  --tw-prose-pre-bg: #ededed;
-  /* Custom */
-  --prose-pre-border: #dcdcdc;
-  --codeblock-label-border: #7c7d7d
-
-}
-
-.dark .prose {
-  --tw-prose-code: #e9995e;
-  --tw-prose-pre-bg: #111827;
-  /* Custom */
-  --prose-pre-border: #333947;
-  --codeblock-label-border: #09f;
-}
-
-.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  border-radius: 2px;
-  color: var(--tw-prose-code);
-  background-color: var(--tw-prose-pre-bg);
-  padding: 0 .15em .1em .15em;
-}
-
-.prose :where(pre code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  color: unset;
-  content: none;
-  background-color: unset;
-  padding: unset;
-}
-
-/* Override to hide backticks */
-
-.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before,
-.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
-  content: none;
-  background-color: transparent;
-}
-
-/* end Syntax Highlighting fixups */
-
-.codeblock-label {
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 1.7142857em;
-  font-size: .9em;
-  max-width: 90%;
-  overflow: hidden;
-}
-
-.codeblock-label code::before {
-  content: '📄';
-  position: sticky;
-  padding: 0 0.2em;
-  font-size: 1.3em;
-  top: 3px;
-  left: 0;
-  background-color: var(--tw-prose-pre-bg);
-}
-
-.codeblock-label::-webkit-scrollbar,
-.codeblock-label code::-webkit-scrollbar {
-  display: none;
-}
-
-.codeblock-label:hover,
-.codeblock-label:hover code {
-  overflow-x: auto;
-}
-
-.codeblock-label code {
-  border-radius: .175rem .175rem 0 0;
-  padding-right: .5em;
-  color: var(--tw-prose-code);
-  background-color: var(--tw-prose-pre-bg);
-  border-bottom-width: 0px;
-  position: relative;
-  top: 1px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.highlight {
-  position: relative;
-  z-index: 20;
-}
-
-.codeblock-label + .highlight .chroma {
-  margin-top: 0;
-  border-radius: 0 .375rem .375rem .375rem;
-}
-
-.codeblock-label code, 
-.highlight .chroma {
-  border: 1px solid var(--prose-pre-border);
 }
