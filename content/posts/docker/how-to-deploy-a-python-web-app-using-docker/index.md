@@ -20,7 +20,7 @@ tags:
 
 This guide will give you a step-by-step on how to deploy a python web application using Docker to a Virtual Private Server (VPS).
 
-This guide will focus on guiding you through setting up a `Dockerfile`, building an image, running it locally, publishing it on Docker Hub, and deploying it to your VPS. DNS Configuration will not covered in this guide.
+We'll cover setting up a `Dockerfile`, building an image, running it locally, publishing it on Docker Hub, and deploying it to your VPS. DNS Configuration will not covered in this guide.
 
 I created an example Python web application that randomly displays a cat image to demonstrate the deployment process. [https://github.com/tanomi-tech/python-webapp-example](https://github.com/tanomi-tech/python-webapp-example)
 
@@ -86,7 +86,7 @@ In our case, we're using Docker's official Python image for the following reason
 ```python
 WORKDIR /user/src/app
 ```
-**3.** `COPY` will, as the keyword hints, copies the files from a source (relative to the location of the `Dockerfile`) to a destination path into our image's filesystem. In our example, we're copying all of the contents in our project relative to our pre-defined `WORKDIR`, which is `/user/src/app`. 
+**3.** `COPY`, as the keyword hints, copies the files from a source (relative to the location of the `Dockerfile`) to a destination path into our image's filesystem. In our example, we're copying all of the contents in our project relative to our pre-defined `WORKDIR`, which is `/user/src/app`. 
 
 As you may have noticed, this means that `Dockerfile` will also be included which isn't ideal since it's redundant. Alternatively, we can explicitly specify the files and/or directories individually.
 
@@ -136,9 +136,19 @@ Now that we have our `Dockerfile` ready to go, we can now build our docker image
 docker build . -t py-webapp-image
 ```
 
-The command takes an optional tag `-t` flag to specify a tag name for the image. Because we're basing our image off of Docker's official Python image, it will automatically detect and build the image based on your OS and architecture because it's image is [multiplatform](https://docs.docker.com/build/building/multi-platform/#building-multi-platform-images).
+The command takes an optional tag `-t` flag to specify a name for the image. More often than not, you'll want to specify a name for your image to easily reference when executing commands, otherwise you will have to use its `IMAGE ID`.
 
-If you'd like to manually specify the platform, pass in the `--platform` flag with a platform the image supports.
+Additionally, you can also define a tag for your image by appending a tag name immediately following a colon `:` as the separator. If you don't specify a tag for your image, Docker will automatically tag it as `latest`. 
+
+Here's an example of specifying a tag along with an image name:
+
+```bash
+docker build . -t py-webapp-image:version-1.0
+```
+
+Because we're basing our image off of Docker's official Python image, it will automatically detect and build the image based on your OS and architecture because it's image is [multiplatform](https://docs.docker.com/build/building/multi-platform/#building-multi-platform-images).
+
+If you'd like to manually specify the platform, pass in the `--platform` flag with a platform the image supports. Please visit [Python's Docker Hub page](https://hub.docker.com/_/python/tags) for more information.
 
 If Docker can't find the base image locally, it'll go ahead and pull the image from Docker Hub first and then create the image. Once it successfully built, you can confirm the image is available by running the following:
 
@@ -189,7 +199,7 @@ Since containers run independently and in isolation from one another, we can run
 
 We're more than halfway there! Now it's time to publish the image to Docker Hub, Docker's online registry for image distribution.
 
-If you haven't already, go ahead and sign-up for an account at [https://hub.docker.com/](https://hub.docker.com/)
+If you haven't already, go ahead and sign up for an account at [https://hub.docker.com/](https://hub.docker.com/)
 
 In the welcome dashboard, navigate to **Create a Repository**. This will redirect you to a Create repository screen that will let you add your repository name under a namespace (defaults to your username).
 
@@ -217,7 +227,7 @@ Now let's go ahead and push our image up to our repository! Run the following co
 docker push py-webapp-image
 ```
 
-Uh-oh...something seems to be wrong:
+Uh-oh... something seems to be wrong:
 
 ```bash
 docker push py-webapp-image
@@ -267,7 +277,7 @@ First thing's first, SSH into your VPS and confirm you have Docker installed. On
 docker run -p 8888:5000 --name cat-app -d <USERNAME>/<REPOSITORY_NAME>
 ```
 
-Alternatively, you can use a previously created Docker Image from our repository to run the random cata generator application, as well:
+Alternatively, you can use a previously created Docker image from our repository to run the random cata generator application, as well:
 
 ```bash
 docker run -p 8888:5000 --name cat-app -d tanomitech/py-webapp-example
@@ -283,7 +293,7 @@ To summarize, here's what we accomplished:
 
 - Setup our `Dockerfile`
 - Built and ran our Image locally
-- Published our Image to Docker's online registry, Docker Hub
+- Published our image to Docker's online registry, Docker Hub
 - Deployed to our VPS of choice with just one Docker command
 
 I hope this guide helped deconstruct the general workflow when using Docker to deploy a Python web application. Please don't hesitate to reach out if you have any questions or think I can elaborate or clarify anything in this article!
