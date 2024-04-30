@@ -1,0 +1,85 @@
+baseURL: https://tanomitech.com/
+languageCode: en-us
+theme: tailbliss
+title: Tanomi Technologies
+ignoreFiles:
+  - (blog|news)-post-\d+.md
+markup:
+  highlight:
+    codeFences: true
+    noClasses: false
+params:
+  google_analytics_id: ""
+  google_tag_manager_id: ""
+  moto: We build trustworthy apps <br/> for your peace of mind.
+  description: ""
+  Disable_stay_uptodate: true
+  main_cta_text: Our Projects
+  main_cta_link: "mailto: info@tanomitech.com"
+  homepage:
+    show_call_box: true
+    services_heading: What we can help you with
+    hide_view_all_services: false
+  logo:
+    mobile: images/logo/logo-alt-mobile.png
+    desktop: images/logo/logo-alt.png
+    desktop_height: 36px
+    alt: Tanomi Technologies
+  homepage_meta_tags:
+    meta_description:
+      Tanomi Technologies is a software development company focused
+      building reliable software and becoming your trusted partner.
+    meta_og_title: Tanomi Technologies | Technology Consulting
+    meta_og_type: website
+    meta_og_url: https://tanomitech.com
+    meta_og_image: https://tanomitech.com/images/landing-tech.jpg
+    meta_og_description: Tanomi Technologies is a software development company
+      focused building reliable software and becoming your trusted partner.
+    meta_twitter_card: summary
+  p1:
+    heading: Our Commitment
+    image: images/our-commitment.png
+    content:
+      - text: is to you and your data. Simple as that.
+      - text: We're so used to giving away our personal information in a few
+              clicks with little to no information about why, how, and when it's
+              being used. 
+      - text: Time and time again companies of all sizes have breached
+              our trust by selling our data, creating user profiles and treating
+              our personal information as a commodity. 
+      - text: Our team knows what it's
+              like to be impacted by some of these things, and we believe that
+              more transparency and trust between producers and consumers is
+              what's missing from today's digital products.
+      - text: Our priority is and always will be user privacy and demonstrating a commitment to ethical data practices to set our products apart and contribute to a more trustworthy digital ecosystem.
+  p4:
+    heading: Latest Posts
+    content:
+      - text: Explore our insights on product, industry updates & much more.
+  footer:
+    copyright_text: Tanomi Technologies
+  social_media:
+    github:
+      enabled: false
+    facebook:
+      enabled: false
+    instagram:
+      enabled: false
+    twitter:
+      enabled: true
+      url: "@tanomitech"
+menu:
+  main:
+    - name: About
+      url: /about/
+      weight: 1
+    - name: Posts
+      url: /posts/
+      weight: 2
+  footer:
+    - name: Home
+      url: /
+      weight: 1
+    - name: About
+      url: /about
+      weight: 2

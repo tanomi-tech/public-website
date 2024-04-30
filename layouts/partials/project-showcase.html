@@ -1,6 +1,6 @@
 {{ range (index .Site.Data "projects") }}
 <div class="overflow-hidden sm:pt-6 lg:relative">
-    <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8" {{ with .SectionHeight }}style="min-height: {{ . }}px"{{ end }}>
+    <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8 lg:min-h-[600px]">
         <div>
             <div class="md:mt-8">
                 <div class="mt-6 sm:max-w-xl">

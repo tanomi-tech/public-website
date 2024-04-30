@@ -1323,16 +1323,8 @@ video {
   height: 100%;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
 .max-h-12 {
   max-height: 3rem;
-}
-
-.min-h-96 {
-  min-height: 24rem;
 }
 
 .w-0 {
@@ -1365,11 +1357,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .min-w-0 {
@@ -2825,6 +2812,26 @@ EmojiSymbols;
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-\[calc\(100\%-50px\)\] {
+    height: calc(100% - 50px);
+  }
+
+  .lg\:h-\[calc\(100\%\*50px\)\] {
+    height: calc(100% * 50px);
+  }
+
+  .lg\:min-h-52 {
+    min-height: 13rem;
+  }
+
+  .lg\:min-h-96 {
+    min-height: 24rem;
+  }
+
+  .lg\:min-h-\[600px\] {
+    min-height: 600px;
   }
 
   .lg\:w-1\/2 {
