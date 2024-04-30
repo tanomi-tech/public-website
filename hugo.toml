@@ -17,8 +17,9 @@ ignoreFiles = ['(blog|news)-post-\d+.md']
   moto = "We build trustworthy apps <br/> for your peace of mind."
   description = ""
   Disable_stay_uptodate = true
-  main_cta_text = "Reach out to us"
+  main_cta_text = "Our Projects"
   main_cta_link = "mailto: info@tanomitech.com"
+  
   [params.homepage]
     show_call_box = true
     services_heading = "What we can help you with"

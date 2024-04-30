@@ -1323,8 +1323,16 @@ video {
   height: 100%;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .max-h-12 {
   max-height: 3rem;
+}
+
+.min-h-96 {
+  min-height: 24rem;
 }
 
 .w-0 {
@@ -1357,6 +1365,11 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .min-w-0 {
