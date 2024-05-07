@@ -1,6 +1,8 @@
 {
 	"scripts": {
-		"dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
+		"dev": "pnpm --parallel /dev:.*/",
+		"dev:hugo": "hugo serve -p 55555 --disableFastRender --enableGitInfo",
+		"dev:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
 		"postinstall": "pnpm --prefix ./themes/tailbliss install"
 	},
 	"dependencies": {
