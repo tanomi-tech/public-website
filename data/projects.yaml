@@ -1,8 +1,9 @@
-- dropfi:
-  Heading: DropFi
-  Content: |
-    A cross-platform tool inspired by Apple AirDrop to share content across devices on your Wi-Fi network. 
-    Uses peer-to-peer (P2P) technologies with no server in between.
+section_title: What we're building
+products:
+  - Heading: DropFi
+    Content: |
+      A cross-platform tool inspired by Apple AirDrop to share content across devices on your Wi-Fi network. 
+      Uses peer-to-peer (P2P) technologies with no server in between.
 
-  Image: ../assets/images/products/dropfi.png
-  Url: https://dropfi.io/
+    Image: ../assets/images/products/dropfi.png
+    Url: https://dropfi.io/
