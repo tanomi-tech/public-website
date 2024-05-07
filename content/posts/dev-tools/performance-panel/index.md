@@ -25,6 +25,11 @@ tags:
 
 The performance tab gives us the ability to record and capture information about the performance when loading or running a page in the browser. We developers can use this in a variety of ways to diganose performance issues related to our apps, find expensive operations that are slowing our sites down, and get an overall picture of what improvements might benefit our front ends to give users a smoother experience.
 
+Here are some example scenarios where you may want to use the Performance panel to diagnose an issue:
+- UI/CSS transitions and animations appear jittery/delayed
+- re-rendering the rows of a table is slow when sorting
+- a calculation in front end JavaScript takes an unexpectedly long time
+
 At first glance, there seems to be a lot going on within it, but it's not as bad as it looks! 
 The entire performance panel is organized into a series of horizontal tracks. 
 We can parse through the tracks to focus on specific points of time in a recording.
@@ -171,7 +176,7 @@ of child function calls.
 ## Closing Thoughts
 Although there is no specific performance bottleneck we need to diagnose here, 
 I hope this overview of how the performance panel can prove useful for devs who need more insights 
-on troubleshooting jittery UI transitions, animations, and table sort times in their apps.
+on troubleshooting front end performance and render issues apps.
 
 
 ## Footnotes
