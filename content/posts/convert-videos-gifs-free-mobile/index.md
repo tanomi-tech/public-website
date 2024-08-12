@@ -6,8 +6,8 @@ featured_image_details:
   href: ''
 author: 'Jesse Barkdoll'
 authorimage: '../assets/images/jesse.png'
-date: 2024-08-11
-draft: true
+date: 2024-08-12
+draft: false
 type: posts
 tags:
   - 'free tools'
