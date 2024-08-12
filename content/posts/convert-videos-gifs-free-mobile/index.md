@@ -1,12 +1,12 @@
 ---
-title: 'Create GIFs from Your Videos for Free on iOS & Android with NeonGIF'
+title: 'Create GIFs from Your Videos for Free on iOS, Android, desktop with NeonGIF'
 featured_image: 'media/post-header.png'
 featured_image_details:
   author: 'n/a' 
   href: ''
 author: 'Jesse Barkdoll'
 authorimage: '../assets/images/jesse.png'
-date: 2024-08-05
+date: 2024-08-11
 draft: true
 type: posts
 tags:
@@ -14,7 +14,7 @@ tags:
   - ffmpeg
 ---
 
-If you're looking to create GIFs directly from your iOS or Android device, look no further than [NeonGIF](https://neongif.tanomitech.com/), a free and user-friendly tool we built to address the following:
+If you're looking to create GIFs directly from your iOS device, Android device, or even desktop (almost anything with a web browser really), look no further than [NeonGIF](https://neongif.tanomitech.com/), a free and user-friendly tool we built to address the following:
 - **Privacy**: there is no server being used to collect data or information from users. The project is also open source and the source code is publically [available on GitHub](https://github.com/tanomi-tech/neongif).
 - **Account creation**: account creation should be totally unnecessary for something like GIF conversion. There is _**no account needed to use NeonGIF**_&mdash; you simply visit the page, upload a video, choose your start time and duration, and NeonGIF goes to work making your GIF. Besides, we have enough accounts to create for online services these days.
 
