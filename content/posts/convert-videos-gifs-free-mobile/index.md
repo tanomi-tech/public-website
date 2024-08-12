@@ -43,5 +43,9 @@ Loop Options: Choose how you want your GIF to loop (continuous, reverse, etc.).
 
 1. **Share Your GIF.** Now that you have your GIF, you can share it directly from your device. Whether it's via messaging apps, social media, or email, your custom GIF is ready to share.
 
+### Limitations of NeonGIF
+We know that no tool is perfect, and NeonGIF is no exception. Since NeonGIF is a web-based tool, there are some limitations that users should be aware of.
+- **File size.** Although _there are no set file size limits with NeonGIF_, if the size of a video files you are using are larger than the amount of memory on your device, this could prevent you from being able to successfully create GIFs. There are too many factors to accurately determine limitations since they are affected by both the device and browser in use, but here is a general guideline&mdash; on any modern mobile or desktop with at least 4GB of available memory, one should be able to use video files of ~1.5GB or less to generate a GIF of 30 seconds or less.
+
 ### Conclusion
 Our hope is that our tool can be one less app on your phone and one less headache when you need send someone a personalized reaction using a funny moment you captured while you were out with your friends last week. Lastly, if you are having issues with NeonGIF, feel free to [report on GitHub](https://github.com/tanomi-tech/neongif/issues) or [contact us here](https://tanomitech.com/contact) and we will do our best to address them.
