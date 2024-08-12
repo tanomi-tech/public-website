@@ -1,6 +1,6 @@
 ---
-title: 'Create GIFs from Your Videos for Free on iOS, Android, desktop with NeonGIF'
-featured_image: 'media/post-header.png'
+title: 'Free Video to Animated GIF Creator for iOS, Android, and desktop'
+featured_image: 'media/post-header.jpg'
 featured_image_details:
   author: 'n/a' 
   href: ''
